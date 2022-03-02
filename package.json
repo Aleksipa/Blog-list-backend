@@ -6,7 +6,9 @@
   "scripts": {
     "start": "NODE_ENV=production node index.js",
     "dev": "NODE_ENV=development nodemon index.js",
-    "test": "NODE_ENV=test jest --verbose --runInBand"
+    "test": "NODE_ENV=test jest --verbose --runInBand",
+    "start:test": "cross-env NODE_ENV=test node index.js",
+    "lint": "eslint ."
   },
   "author": "Aleksi Paavola",
   "license": "MIT",
@@ -21,6 +23,7 @@
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
     "dotenv": "^15.0.0",
     "express": "^4.17.2",
     "jsonwebtoken": "^8.5.1",
